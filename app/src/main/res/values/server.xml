@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- where to connect -->
+    <string name="api_endpoint">http://cwx.andrewbevitt.com:10808/api/</string>
+
+    <!-- api access token -->
+    <string name="api_token_name">X-CWX-API-TOKEN</string>
+    <string name="api_token_key">1234-5678</string>
+
+    <!-- api session key token name -->
+    <string name="api_session_name">X-CWX-SESSION-KEY</string>
+
+    <!-- timeouts in seconds -->
+    <integer name="http_connect_timeout">5</integer>
+    <integer name="http_write_timeout">5</integer>
+    <integer name="http_read_timeout">10</integer>
+
+</resources>

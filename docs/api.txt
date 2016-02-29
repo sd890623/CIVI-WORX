@@ -1,0 +1,97 @@
+These URL's all are based on http://your.domain/api/ - the /api has not been included.
+
+All URL's return 405 (not allowed) if an invalid HTTP method is used.
+
+/auth/session
+ - POST {username, password} to login
+ - Sends 302 on success -> session data fetch url
+ - Sends 401 on auth failure
+
+/auth/session/[session_key]/
+ - GET to fetch session details
+   Sends 200 with JSON as response body
+ - DELETE to logout
+   Sends 204 with 'OK' as response body
+ - Sends 404 if that session key does not exist
+
+ All URL's from here on require the HTTP header X-CWX-SESSION-KEY to be set. This can be
+ retreived from the above /auth/session/[session_key]/ which is sent as a redirect URL on
+ successful login.
+
+/auth/profile/
+ - POST {username, password, person_name, person_loc, person_bio, person_img} to create account
+   The new user is logged in automatically
+ - Sends 302 on success -> session data fetch url
+ - Sends 400 if some data is invalid
+
+/auth/profile/me/
+ - PUT to update user account, content should be form encoded
+    {username, password, person_name, person_loc, person_bio, person_img}
+ - Returns 200 with 'OK' as response body on success
+ - Returns 401 if not logged in
+
+/reports/
+ - POST {title, latitude, longitude} to add new report
+ - Sends 302 on success -> new report resource URL
+ - Sends 400 if some data is invalid
+ - Sends 401 if not logged in
+
+/reports/subscribed/
+ - GET to fetch description of all subscribed reports
+ - Sends 200 with JSON response body
+ - Sends 401 if not logged in
+
+/reports/search/title/[keyword]/
+ - GET to fetch description of reports with title matching keyword
+ - Sends 200 with JSON response body
+ - Sends 401 if not logged in
+
+/reports/search/area/[latitude]/[longitude]/[radius]/
+ - GET to fetch description of reports in the described circle
+ - Sends 200 with JSON reponse body
+ - Sends 401 if not logged in
+
+/report/[report_id]/
+ - GET to fetch description of specific report
+ - Sends 200 with JSON reponse body
+ - Sends 401 if not logged in
+ - Sends 404 if report with given id does not exist
+
+/report/[report_id]/subscribe/
+ - PUT to subscribe session user to the given report
+   Sends 200 with response body 'OK'
+ - DELETE to unsubscribe session user from the given report
+   Sends 204 with response body 'OK'
+ - Sends 401 if not logged in
+ - Sends 404 if report with given id does not exist
+
+/report/[report_id]/messages/
+ - GET to fetch description of all messages for given report
+   Sends 200 with JSON reponse body
+ - POST {message_text, reply_to, img_data} to create new message on report
+   NOTE: img_data is optional (see images create below)
+   Sends 302 on success -> new message resource URL
+   Sends 400 if data is not valid
+ - Sends 401 if not logged in
+ - Sends 404 if report with given id does not exist
+
+/report/[report_id]/message/[message_id]/
+ - GET to fetch description of the given message on given report
+ - Sends 200 with JSON response body
+ - Sends 401 if not logged in
+ - Sends 404 if report or message with given id does not exist
+
+/report/[report_id]/message/[message_id]/images/
+ - GET to fetch description of given report/message attached images
+   Sends 200 with JSON response body
+ - POST {img_data} to attach new image to given report message
+   Sends 302 on success -> new image resource URL
+   Sends 400 if data is not valid
+ - Sends 401 if not logged in
+ - Sends 404 if report or message with given id does not exist
+
+/report/[report_id]/message/[message_id]/image/[image_id]/
+ - GET to fetch description of the given image for given report/message
+ - Sends 200 with JSON response body
+ - Sends 401 if not logged in
+ - Sends 404 if report or message with given id does not exist

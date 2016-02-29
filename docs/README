@@ -1,0 +1,112 @@
+COMP90018 - Mobile Computing 
+Group 8: Andrew Bevitt (601036), Yichen Li (654612), Di Sun (575588) & James Yew (654127)
+
+CiviWorx
+
+An application that allows members of the community to engage with civil
+authorities to report maintenance, accidents or other issues. Each report
+becomes a conversation allowing community members to continue to be engaged
+in and with their local area.
+
+There are two components to this application:
+ 1) An Android app. for community members to use 
+ 2) A Django powered web API which the app. uses to sync data
+
+The Android application has been developed for Jelly Bean 4.1 (API 16).
+
+The Android application consists of the following activities:
+ - StartupActivity
+   The main app. entry point, checks if a user is currently logged in.
+   If user is not logged in allows login (LoginActivity) or registration
+   (RegisterActivity); but if user is logged in redirects to the main
+   app. view in MapViewActivity.
+ - LoginActivity
+   A form which allows user to enter username (email) and password.
+   Uses a fragment for the form which is reused in RegisterActivity.
+ - RegisterActivity
+   A form which allows user to create an account on the server.
+   Uses a fragment for the username/password (LoginActivity) and another
+   for the account details which is reused in the ProfileActivity.
+ - MapViewActivity
+   The main app. activity. Displays a map with users subscribed reports
+   as markers. Provides menu and buttons to move to other activities, 
+   as well as handling the addition of new reports. On startup centers
+   the map on user's current location (GPS/Network).
+ - ProfileActivity
+   Allows user to update their personal details (including photo).
+   Reuses the account details fragment from RegisterActivity.
+ - InboxActivity
+   Provides a list of subscribed reports instead of map view.
+   Clicking on a report opens the ReportViewActivity.
+ - ReportViewActivity
+   View details of a selected report
+   TODO: reply to the report
+ - SettingsActivity
+   Allows setting a few user preferences.
+
+The Android application also has the following packages:
+ - civiworx.db
+   Provides abstraction over the app. local SQLite database. The database 
+   contains two tables (reports and messages). All queries are handled by
+   the QueryHandler class.
+ - civiworx.fragment
+   Management code for the login, profile and settings fragments used by
+   the activities. Each defines a sub interface which an embedding activity
+   should implement. The interface defines callback methods to communicate
+   state changes to the activity (e.g. login fragment calls doLogin()).
+ - civiworx.http
+   Provides abstraction over the OK HTTP library to communicate with the
+   server. All requests have an extra header injected X-CWX-SESSION-KEY
+   which the server inspects to decide if user is authenticated.
+ - civiworx.ui
+   Non-fragment reusable UI components, including verbose report display.
+
+The Android application requires the following libraries:
+ - appcompat-v7
+ - okhttp and okio (for HTTP requests)
+ - play-services
+ - support-annotations
+ - support-v4
+
+
+The Django Web Service has two applications:
+ 1) worx - which defines the server side data abstraction classes.
+    This would also define web interfaces to the application in the
+    future, but for now is just the ORM. See worx/models.py for details.
+ 2) api - manages the API URL endpoints.
+    The API is expected to require versioning so all api methods are 
+    in the api/v1.py file. The API app also defines a session table 
+    which can be found in api/models.py. URL's are described in the
+    api.txt document in this folder and invoked in api/urls.py.
+to run the web application:
+ pip install django (or easy_install) see http://djangoproject.com/
+ python manage.py runserver 0.0.0.0:PORT
+ (app is set to use http://cwx.andrewbevitt.com:10808/ but this won't
+  be left live after demonstration, so change in app resources file:
+  app/src/main/res/values/server.xml)
+
+Team Members:
+
+Andrew Bevitt - ID: 601036
+Roles:
+- Network Communications
+- Location Services Integration
+- Django Server Development
+
+Yichen Li - ID: 654612
+Roles:
+- Account Registration
+- Account Login and Handling
+- User Profiles
+
+Di Sun - ID: 575588
+Roles:
+- Maps Integration
+- Application Look and Feel
+- Message Storage and Handling
+
+James Yew - ID: 654127
+Roles:
+- Map Markers and Controls
+- User Report Creation
+- User Report Display

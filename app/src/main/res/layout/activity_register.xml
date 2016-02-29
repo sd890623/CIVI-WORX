@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="au.edu.unimelb.comp90018.civiworx.RegisterActivity">
+
+    <ScrollView android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+        <TextView
+            android:text="@string/app_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="50dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/instruction_register_login_details" />
+
+        <fragment
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:name="au.edu.unimelb.comp90018.civiworx.fragment.LoginFragment"
+            android:id="@+id/register_login_fragment"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/instruction_confirm_password" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/register_password_confirm"
+            android:hint="@string/hint_login_password" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/instruction_profile_fields" />
+
+        <fragment
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:name="au.edu.unimelb.comp90018.civiworx.fragment.ProfileFragment"
+            android:id="@+id/register_profile_fragment"
+            android:layout_below="@+id/register_login_fragment"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/register_activity_do"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_register_do"
+            android:layout_margin="10dp"
+            android:layout_below="@id/register_profile_fragment" />
+
+        <Button
+            android:id="@+id/register_activity_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel"
+            android:layout_margin="10dp"
+            android:layout_below="@id/register_activity_do" />
+    
+    </ScrollView>
+
+</LinearLayout>

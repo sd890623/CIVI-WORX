@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\okhttp-2.0.0-7024b42d51551b007cc5278ba7a56e815147e8b4.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.0.0\4c8d1536dba3812cc1592090dc20c47a4ed3c35e\okhttp-2.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="4c8d1536dba3812cc1592090dc20c47a4ed3c35e"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\classes-ce999ae33669fe3da14c6a78feea03c21501c3c7.jar"
+        jar="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-08b046d92cb80f00a4265c0c26f8ffa00424dc12.jar"
+        jar="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\classes-0ea75c0ea942b5756f41b3c3d12e7f5295c551d5.jar"
+        jar="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\okio-1.0.0-f3a5428385bf439b0c9fa14fdc59128564195ffa.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.0.0\2534c458682c73f5b9871131ab3098d3f987ca3\okio-1.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="02534c458682c73f5b9871131ab3098d3f987ca3"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-6af5f7b50b29879a4ac25b7eda5085c0dd0403a6.jar"
+        jar="E:\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\pre-dexed\debug\classes-45628b634c401d3a07f246de78bbb23a486103c5.jar"
+        jar="E:\Dropbox\Mobile Computing\CiviWorx\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+
+</pre-dex-items>

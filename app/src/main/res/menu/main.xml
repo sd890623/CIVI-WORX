@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/make_new_report"
+        android:title="@string/menu_new_report"
+        android:icon="@drawable/ic_action_new"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/open_messages"
+        android:title="@string/menu_msg_inbox"
+        android:actionLayout="@layout/actionbar_messages_layout"
+        android:icon="@drawable/ic_action_email"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/open_user_profile"
+        android:title="@string/menu_profile"
+        android:icon="@drawable/ic_action_person"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout_user_account"
+        android:title="@string/menu_logout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/open_application_settings"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/ic_action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/manually_sync"
+        android:title="@string/menu_sync"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/toggle_heatmap"
+        android:title="@string/menu_heatmap"
+        app:showAsAction="never" />
+
+</menu>

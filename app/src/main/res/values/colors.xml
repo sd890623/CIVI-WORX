@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="off_white">#ffeeeeee</color>
+    <color name="actionbar_messages_text">#ffff0000</color>
+    <color name="actionbar_messages_bkg">#99eeeeee</color>
+
+</resources>

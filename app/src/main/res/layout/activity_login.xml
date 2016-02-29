@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:text="@string/app_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="50dp"
+        android:gravity="center" />
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="au.edu.unimelb.comp90018.civiworx.fragment.LoginFragment"
+        android:id="@+id/login_activity_fragment"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/login_activity_do"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_login_do"
+        android:layout_margin="10dp"
+        android:layout_below="@id/login_activity_fragment" />
+
+    <Button
+        android:id="@+id/login_activity_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cancel"
+        android:layout_margin="10dp"
+        android:layout_below="@id/login_activity_do" />
+
+    <!--
+    <Button
+        android:id="@+id/demo_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_activity_fragment"
+        android:text="Demo Click" />
+    -->
+
+</LinearLayout>

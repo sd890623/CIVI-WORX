@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="au.edu.unimelb.comp90018.civiworx.ProfileActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/instruction_profile_fields" />
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="au.edu.unimelb.comp90018.civiworx.fragment.ProfileFragment"
+        android:id="@+id/profile_profile_fragment"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>

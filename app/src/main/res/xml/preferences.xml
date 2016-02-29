@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="pref_push_notice"
+        android:title="@string/pref_push_notice"
+        android:summary="@string/pref_push_notice_summ"
+        android:defaultValue="true" />
+
+    <au.edu.unimelb.comp90018.civiworx.ui.ListPreferenceWithSummary
+        android:key="pref_sync_method"
+        android:title="@string/pref_sync_method"
+        android:dialogTitle="@string/pref_sync_method"
+        android:entries="@array/pref_sync_method_entries"
+        android:entryValues="@array/pref_sync_method_values"
+        android:defaultValue="@string/pref_sync_method_default" />
+
+</PreferenceScreen>
